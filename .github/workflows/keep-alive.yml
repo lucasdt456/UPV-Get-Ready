@@ -1,0 +1,14 @@
+name: Keep Streamlit Alive
+
+on:
+  schedule:
+    - cron: "0 */4 * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send request to Streamlit app
+        run: |
+          curl -s -o /dev/null -w "%{http_code}\n" "https://upv-get-ready-app.streamlit.app/"
