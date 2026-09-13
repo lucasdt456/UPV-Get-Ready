@@ -1,0 +1,21 @@
+[project]
+name = "upv-scraper-project"
+version = "0.1.0"
+description = "UPV Subject Scraper"
+readme = "README.md"
+authors = [
+    { name = "Lucas", email = "virgillitolucas430@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "google-genai>=2.23.0",
+    "playwright>=1.62.0",
+    "streamlit>=1.63.0",
+]
+
+[project.scripts]
+upv-scraper-project = "upv_scraper_project:main"
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"

@@ -1,0 +1,35 @@
+CENTRES_LIST = [
+    "Beihang Valencia Polytechnic Institute",
+    "E. Politécnica Superior de Alcoy",
+    "E. Politécnica Superior de Gandia",
+    "Escuela de Doctorado",
+    "ETS de Arquitectura",
+    "ETS de Ing. Agron. y del Medio Natural",
+    "ETS de Ingeniería de Edificación",
+    "ETS de Ingeniería de Telecomunicación",
+    "ETS de Ingeniería Industrial",
+    "ETS de Ingeniería Informática",
+    "ETSI Aeroespacial y Diseño Industrial",
+    "ETSI Caminos, Canales y Puertos",
+    "ETSI Geodésica, Cartogr. y Top.",
+    "F. Admin y Dirección de Empresas",
+    "Facultad de Bellas Artes",
+]
+ABBREVIATIONS_CENTRES = {
+    "Beihang Valencia Polytechnic Institute": "BVPI",  # different
+    "E. Politécnica Superior de Alcoy": "EPSA",
+    "E. Politécnica Superior de Gandia": "EPSG",
+    "Escuela de Doctorado": "EDOCTO",
+    "ETS de Arquitectura": "ETSA",
+    "ETS de Ing. Agron. y del Medio Natural": "ETSIAMN",
+    "ETS de Ingeniería de Edificación": "EUAT",
+    "ETS de Ingeniería de Telecomunicación": "ETSIT",
+    "ETS de Ingeniería Industrial": "ETSII",
+    "ETS de Ingeniería Informática": "ETSINF",
+    "ETSI Aeroespacial y Diseño Industrial": "EUITI",
+    "ETSI Caminos, Canales y Puertos": "ETSICCP",
+    "ETSI Geodésica, Cartogr. y Top.": "EUITTOP",
+    "F. Admin y Dirección de Empresas": "FADE",
+    "Facultad de Bellas Artes": "FBA",
+}
+print(CENTRES_LIST.index("Beihang Valencia Polytechnic Institute"))
