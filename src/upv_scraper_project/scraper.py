@@ -12,11 +12,6 @@ class UPVScraper:
     def __init__(self, centre):
         self.centre_name = centre
         self.centre = constants.ABBREVIATIONS_CENTRES[centre]
-        # self._titulations = {}
-        # self._years = {}
-        # self._subjects = {}
-        # self._all_content_to_export_json = {}
-        # self._presentate_data = {}
 
     def obtain_titulation(self) -> dict:
         titulations = {}
@@ -59,10 +54,6 @@ class UPVScraper:
                 browser.close()
         return titulations
 
-    # @property
-    # def titulations(self):
-    #     return self._titulations
-
     def obtain_course(
         self,
         # titulation_clicked="Grado en Inteligencia Artificial",
@@ -99,10 +90,6 @@ class UPVScraper:
             finally:
                 browser.close()
         return years
-
-    # @property
-    # def years(self):
-    #     return self._years
 
     def extract_subjects(
         self,
@@ -225,52 +212,3 @@ class UPVScraper:
             },
             "subjects": updated_subjects,
         }
-
-    # @property
-    # def subjects(self):
-    #     return self._subjects
-
-    # @subjects.setter
-    # def subjects(self, new_subjects):
-    #     self._subjects = new_subjects
-
-    # def save_to_presentate(self, titulation, year):
-    #     self._presentate_data = {
-    #         "centre": {
-    #             "titulation": titulation,
-    #             "year": year,
-    #             "subjects": [
-    #                 {"subject_name": name, "details": details}
-    #                 for name, details in self._subjects.items()
-    #             ],
-    #         }
-    #     }
-
-    # @property
-    # def presentate_data(self):
-    #     return self._presentate_data
-
-    # def save_all_contents(self, titulation, year):
-    #     self._all_content_to_export_json = {
-    #         "metadata": {
-    #             "center": f"{self.centre_name}: {self.centre}",
-    #             "titulation": titulation,
-    #             "year": year,
-    #             "extraction_date": time.strftime("%Y-%m-%d %H:%M:%S"),
-    #         },
-    #         "subjects": self._subjects,
-    #     }
-
-    # @property
-    # def all_content_to_export_json(self):
-    #     return self._all_content_to_export_json
-
-    # def save_subject_in_json(self):
-    #     file_name = "degree.json"
-    #     base_dir = Path(__file__).resolve().parent.parent.parent
-    #     file_path = base_dir / "data" / file_name
-    #     file_path.parent.mkdir(parents=True, exist_ok=True)
-
-    #     with open(file_path, "w", encoding="utf-8") as f:
-    #         json.dump(self._all_content_to_export_json, f, ensure_ascii=False, indent=4)
-    #     print(f"Good save in: {file_name} (JSON)")
