@@ -2,6 +2,7 @@ import json
 
 import pandas as pd
 import streamlit as st
+
 from src.upv_scraper_project import constants
 from src.upv_scraper_project.ia_planner import generate_markdown_resume
 from src.upv_scraper_project.scraper import UPVScraper
