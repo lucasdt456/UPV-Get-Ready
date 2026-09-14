@@ -3,6 +3,7 @@ import json
 import pandas as pd
 import streamlit as st
 
+from setup import setup_playwright
 from src.upv_scraper_project import constants
 from src.upv_scraper_project.ia_planner import generate_markdown_resume
 from src.upv_scraper_project.scraper import UPVScraper
@@ -344,6 +345,9 @@ def render_table_view():
 
 
 def main():
+
+    setup_playwright()
+
     init_session_state()
 
     st.sidebar.header("Navigation")
